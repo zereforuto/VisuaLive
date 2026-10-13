@@ -1,0 +1,13 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pyodbc==5.1.0
+python-dotenv==1.0.1
+onnxruntime-gpu==1.19.2
+insightface==0.7.3
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+python-multipart==0.0.9
+pydantic==2.9.2
+pydantic-settings==2.5.2
+websockets==13.1
