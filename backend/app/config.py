@@ -33,7 +33,7 @@ class Settings(BaseSettings):
 
     # Uploads
     max_upload_size_mb: int = 500
-    allowed_video_extensions: str = ".mp4,.mov"
+    allowed_video_extensions: str = ".mp4,.mov,.webm,.avi"
     allowed_image_extensions: str = ".jpg,.jpeg,.png,.webp"
 
     @property

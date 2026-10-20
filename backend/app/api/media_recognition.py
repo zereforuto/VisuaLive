@@ -26,9 +26,11 @@ MAX_VIDEO_FRAMES = 120
 
 def _media_kind(filename: str) -> str:
     extension = Path(filename).suffix.lower()
-    if extension in settings.allowed_image_ext_set:
+    allowed_images = settings.allowed_image_ext_set | {".jpg", ".jpeg", ".png", ".webp"}
+    allowed_videos = settings.allowed_video_ext_set | {".mp4", ".mov", ".webm", ".avi", ".mkv"}
+    if extension in allowed_images:
         return "image"
-    if extension in settings.allowed_video_ext_set:
+    if extension in allowed_videos:
         return "video"
     raise HTTPException(status_code=400, detail="Unsupported media type.")
 
